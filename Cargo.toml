@@ -1,0 +1,13 @@
+[package]
+name = 'strconf'
+description = 'Tired of unexpected configuration format fatigue? Now get tired more!'
+version = '0.1.0'
+edition = '2021'
+
+[dependencies]
+anyhow = '1'
+toml = '0.8.12'
+
+[dependencies.serde]
+version = '1.0.197'
+features = ['derive']
