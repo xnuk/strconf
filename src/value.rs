@@ -51,6 +51,14 @@ impl<H: BuildHasher + Default, T: Into<Value<H>>> From<HashMap<String, T, H>>
 	}
 }
 
+impl<H: BuildHasher + Default, T: Into<Value<H>>> From<HashMap<String, T, H>>
+	for Config<H>
+{
+	fn from(value: HashMap<String, T, H>) -> Self {
+		Config(value.into_iter().map(|(k, v)| (k, v.into())).collect())
+	}
+}
+
 #[derive(Default)]
 struct ValueVisit<H> {
 	_hasher: PhantomData<H>,
