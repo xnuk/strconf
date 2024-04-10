@@ -8,6 +8,8 @@ license = 'AGPL-3.0-or-later'
 [dependencies]
 anyhow = '1'
 toml = '0.8.12'
+serde_json = '1.0.115'
+serde_yaml = '0.9.33'
 
 [dependencies.serde]
 version = '1.0.197'
